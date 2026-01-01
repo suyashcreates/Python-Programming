@@ -1,0 +1,41 @@
+# PROBLEM 1: Create variables of each data type and print their types
+# Solution:
+name = "Alice"
+age = 30
+height = 5.6
+is_student = False
+data = None
+
+print(f"name: {type(name)}")
+print(f"age: {type(age)}")
+print(f"height: {type(height)}")
+print(f"is_student: {type(is_student)}")
+print(f"data: {type(data)}")
+
+# PROBLEM 2: Convert string "42.5" to float, then to integer
+# Solution:
+string_num = "42.5"
+float_num = float(string_num)
+int_num = int(float_num)
+print(f"String: {string_num}, Float: {float_num}, Integer: {int_num}")
+
+# PROBLEM 3: Calculate the area of a circle (use power operator)
+# Solution:
+radius = 5
+pi = 3.14159
+area = pi * radius**2
+print(f"Area of circle: {round(area, 2)}")
+
+# PROBLEM 4: Print a poem using multi-line string
+# Solution:
+poem = '''Roses are red,
+Violets are blue,
+Python is awesome,
+And so are you!'''
+print(poem)
+
+# PROBLEM 5: Import random module and generate a random number
+# Solution:
+import random
+random_num = random.randint(1, 100)
+print(f"Random number: {random_num}")
