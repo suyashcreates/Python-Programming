@@ -1,0 +1,33 @@
+# PRINT STATEMENTS
+print("Hello World")
+print('''Multiple
+lines
+here''')
+
+# COMMENTS
+# Single line comment
+"""
+Multi-line
+comment
+"""
+
+# MODULES & PIP
+# pip install module_name
+import pyjokes  # external module
+
+# VARIABLES & DATA TYPES
+name = "John"        # string
+age = 25             # integer
+price = 99.99        # float
+is_active = True     # boolean
+nothing = None       # none
+
+# TYPE CHECKING & CASTING
+x = "100"
+print(type(x))       # <class 'str'>
+y = int(x)           # type casting to integer
+print(type(y))       # <class 'int'>
+
+# ROUNDING
+print(round(3.14159, 2))  # 3.14
+print(5**2)               # 25 (power)
