@@ -1,0 +1,39 @@
+"""
+PROJECT: Personal Info Card Generator
+Description: Create a program that stores and displays personal information
+"""
+
+import random
+
+# Personal Information Variables
+first_name = "John"
+last_name = "Doe"
+age = 25
+height = 5.9
+is_employed = True
+hobbies = None  # Will be updated later
+
+# Generate a random ID
+user_id = random.randint(10000, 99999)
+
+# Display Info Card
+print("=" * 40)
+print("         PERSONAL INFO CARD")
+print("=" * 40)
+print(f'''
+ID: {user_id}
+Name: {first_name} {last_name}
+Age: {age} years
+Height: {height} ft
+Employment Status: {"Employed" if is_employed else "Unemployed"}
+Hobbies: {"Not specified" if hobbies is None else hobbies}
+''')
+print("=" * 40)
+
+# Type Information
+print("\n--- Data Types Used ---")
+print(f"first_name: {type(first_name).__name__}")
+print(f"age: {type(age).__name__}")
+print(f"height: {type(height).__name__}")
+print(f"is_employed: {type(is_employed).__name__}")
+print(f"hobbies: {type(hobbies).__name__}")
