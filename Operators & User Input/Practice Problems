@@ -1,0 +1,47 @@
+
+### Practice Problems:
+
+```python
+# PROBLEM 1: Simple Calculator
+# Solution:
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+print(f"Addition: {num1 + num2}")
+print(f"Subtraction: {num1 - num2}")
+print(f"Multiplication: {num1 * num2}")
+print(f"Division: {num1 / num2}")
+print(f"Power: {num1 ** num2}")
+
+# PROBLEM 2: Check if number is even or odd using modulus
+# Solution:
+number = int(input("Enter a number: "))
+is_even = number % 2 == 0
+print(f"Is {number} even? {is_even}")
+
+# PROBLEM 3: Check voting eligibility using comparison & logical operators
+# Solution:
+age = int(input("Enter your age: "))
+is_citizen = input("Are you a citizen? (yes/no): ").lower() == "yes"
+
+can_vote = age >= 18 and is_citizen
+print(f"Eligible to vote: {can_vote}")
+
+# PROBLEM 4: Temperature Converter
+# Solution:
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius}°C = {fahrenheit}°F")
+
+# PROBLEM 5: Compound Interest Calculator
+# Solution:
+principal = float(input("Enter principal amount: "))
+rate = float(input("Enter interest rate (%): "))
+time = int(input("Enter time (years): "))
+
+amount = principal * (1 + rate/100) ** time
+interest = amount - principal
+print(f"Compound Interest: {round(interest, 2)}")
+print(f"Total Amount: {round(amount, 2)}")
+```
+
