@@ -1,0 +1,47 @@
+
+```python
+"""
+PROJECT: Smart Bill Calculator
+Description: Calculate restaurant bill with tip and split options
+"""
+
+print("=" * 40)
+print("      SMART BILL CALCULATOR")
+print("=" * 40)
+
+# Get bill details
+bill_amount = float(input("\nEnter the total bill amount: $"))
+tip_percentage = int(input("Enter tip percentage (10/15/20): "))
+num_people = int(input("Number of people to split: "))
+
+# Calculations
+tip_amount = bill_amount * (tip_percentage / 100)
+total_with_tip = bill_amount + tip_amount
+per_person = total_with_tip / num_people
+
+# Apply discount for large groups
+discount = 0
+if num_people >= 5:
+    discount = total_with_tip * 0.10  # 10% group discount
+    total_with_tip -= discount
+    per_person = total_with_tip / num_people
+
+# Display Results
+print("\n" + "=" * 40)
+print("           BILL SUMMARY")
+print("=" * 40)
+print(f"Original Bill:     ${bill_amount:.2f}")
+print(f"Tip ({tip_percentage}%):          ${tip_amount:.2f}")
+if discount > 0:
+    print(f"Group Discount:    -${discount:.2f}")
+print(f"Total Amount:      ${total_with_tip:.2f}")
+print("-" * 40)
+print(f"Per Person ({num_people}):     ${per_person:.2f}")
+print("=" * 40)
+
+# Fun comparison
+is_expensive = per_person > 25
+print(f"\nExpensive dinner? {is_expensive}")
+```
+
+---
