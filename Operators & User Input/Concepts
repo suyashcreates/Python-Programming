@@ -1,0 +1,39 @@
+
+### Topics Covered:
+```python
+# ARITHMETIC OPERATORS
+a, b = 10, 3
+print(a + b)   # 13 - Addition
+print(a - b)   # 7 - Subtraction
+print(a * b)   # 30 - Multiplication
+print(a / b)   # 3.33 - Division
+print(a // b)  # 3 - Floor Division
+print(a % b)   # 1 - Modulus
+print(a ** b)  # 1000 - Power
+
+# ASSIGNMENT OPERATORS
+x = 10
+x += 5   # x = x + 5 = 15
+x -= 3   # x = x - 3 = 12
+x *= 2   # x = x * 2 = 24
+x /= 4   # x = x / 4 = 6.0
+
+# COMPARISON OPERATORS
+print(5 == 5)   # True
+print(5 != 3)   # True
+print(5 > 3)    # True
+print(5 < 3)    # False
+print(5 >= 5)   # True
+print(5 <= 3)   # False
+
+# LOGICAL OPERATORS
+print(True and False)  # False
+print(True or False)   # True
+print(not True)        # False
+
+# INPUT FUNCTION
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))  # Type casting input
+price = float(input("Enter price: "))
+```
+
