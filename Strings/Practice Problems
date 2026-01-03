@@ -1,0 +1,48 @@
+### Practice Problems:
+
+```python
+# PROBLEM 1: Reverse a string using slicing
+# Solution:
+text = input("Enter a string: ")
+reversed_text = text[::-1]
+print(f"Reversed: {reversed_text}")
+
+# PROBLEM 2: Count vowels in a string
+# Solution:
+string = input("Enter a string: ").lower()
+vowels = "aeiou"
+count = 0
+for char in string:
+    if char in vowels:
+        count += 1
+print(f"Number of vowels: {count}")
+
+# PROBLEM 3: Check if string is palindrome
+# Solution:
+word = input("Enter a word: ").lower()
+is_palindrome = word == word[::-1]
+print(f"Is palindrome: {is_palindrome}")
+
+# PROBLEM 4: Extract domain from email
+# Solution:
+email = input("Enter email: ")
+at_index = email.find("@")
+domain = email[at_index + 1:]
+print(f"Domain: {domain}")
+
+# PROBLEM 5: Create username from full name
+# Solution:
+full_name = input("Enter full name: ")
+parts = full_name.lower().split()
+username = parts[0][0] + parts[-1] + str(len(full_name))
+print(f"Username: {username}")
+
+# PROBLEM 6: Mask credit card number (show last 4 digits)
+# Solution:
+card = input("Enter 16-digit card number: ")
+masked = "*" * 12 + card[-4:]
+print(f"Masked: {masked}")
+```
+
+
+```
