@@ -1,0 +1,70 @@
+# Project: Text Analyzer Tool
+
+```python
+"""
+PROJECT: Text Analyzer Tool
+Description: Analyze text for various statistics and manipulations
+"""
+
+print("=" * 50)
+print("           TEXT ANALYZER TOOL")
+print("=" * 50)
+
+# Get text input
+text = input("\nEnter your text:\n")
+
+# Basic Statistics
+char_count = len(text)
+char_no_spaces = len(text.replace(" ", ""))
+word_count = len(text.split())
+sentence_count = text.count(".") + text.count("!") + text.count("?")
+
+# Vowel and Consonant Count
+vowels = "aeiouAEIOU"
+consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+vowel_count = sum(1 for char in text if char in vowels)
+consonant_count = sum(1 for char in text if char in consonants)
+
+# Case Conversions
+upper_text = text.upper()
+lower_text = text.lower()
+title_text = text.title()
+reversed_text = text[::-1]
+
+# Word Analysis
+words = text.split()
+longest_word = max(words, key=len) if words else ""
+shortest_word = min(words, key=len) if words else ""
+
+# Display Results
+print("\n" + "=" * 50)
+print("              ANALYSIS RESULTS")
+print("=" * 50)
+
+print(f"""
+📊 STATISTICS:
+   • Total Characters: {char_count}
+   • Characters (no spaces): {char_no_spaces}
+   • Word Count: {word_count}
+   • Sentence Count: {sentence_count}
+   • Vowels: {vowel_count}
+   • Consonants: {consonant_count}
+
+🔤 CASE CONVERSIONS:
+   • UPPERCASE: {upper_text[:50]}...
+   • lowercase: {lower_text[:50]}...
+   • Title Case: {title_text[:50]}...
+   • Reversed: {reversed_text[:50]}...
+
+📝 WORD ANALYSIS:
+   • Longest Word: "{longest_word}" ({len(longest_word)} chars)
+   • Shortest Word: "{shortest_word}" ({len(shortest_word)} chars)
+""")
+
+# Check for specific content
+print("🔍 CONTENT CHECKS:")
+print(f"   • Starts with capital: {text[0].isupper() if text else False}")
+print(f"   • Ends with punctuation: {text[-1] in '.!?' if text else False}")
+print(f"   • Contains numbers: {any(char.isdigit() for char in text)}")
+
+print("=" * 50)
