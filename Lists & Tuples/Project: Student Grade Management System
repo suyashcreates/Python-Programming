@@ -1,0 +1,85 @@
+```python
+"""
+PROJECT: Student Grade Management System
+Description: Manage student grades using lists and tuples
+"""
+
+print("=" * 50)
+print("      STUDENT GRADE MANAGEMENT SYSTEM")
+print("=" * 50)
+
+# Student data: (name, [grades])
+students = []
+
+def add_student(name, grades):
+    students.append((name, grades))
+
+def calculate_average(grades):
+    return sum(grades) / len(grades) if grades else 0
+
+def get_grade_letter(average):
+    if average >= 90:
+        return "A"
+    elif average >= 80:
+        return "B"
+    elif average >= 70:
+        return "C"
+    elif average >= 60:
+        return "D"
+    else:
+        return "F"
+
+# Add sample students
+add_student("Alice", [85, 90, 88, 92])
+add_student("Bob", [78, 82, 75, 80])
+add_student("Charlie", [92, 95, 98, 94])
+add_student("Diana", [65, 70, 68, 72])
+add_student("Eve", [55, 60, 58, 52])
+
+# Display all students
+print("\n📋 STUDENT RECORDS:")
+print("-" * 50)
+print(f"{'Name':<15} {'Grades':<25} {'Avg':<8} {'Grade'}")
+print("-" * 50)
+
+all_averages = []
+for name, grades in students:
+    avg = calculate_average(grades)
+    all_averages.append(avg)
+    letter = get_grade_letter(avg)
+    grades_str = str(grades)
+    print(f"{name:<15} {grades_str:<25} {avg:<8.2f} {letter}")
+
+print("-" * 50)
+
+# Statistics
+print("\n📊 CLASS STATISTICS:")
+print(f"   • Total Students: {len(students)}")
+print(f"   • Class Average: {calculate_average(all_averages):.2f}")
+print(f"   • Highest Average: {max(all_averages):.2f}")
+print(f"   • Lowest Average: {min(all_averages):.2f}")
+
+# Top performer
+top_index = all_averages.index(max(all_averages))
+top_student = students[top_index][0]
+print(f"   • Top Performer: {top_student}")
+
+# Passing/Failing
+passing = sum(1 for avg in all_averages if avg >= 60)
+failing = len(students) - passing
+print(f"   • Passing: {passing}")
+print(f"   • Failing: {failing}")
+
+# Grade distribution
+print("\n📈 GRADE DISTRIBUTION:")
+grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+for avg in all_averages:
+    letter = get_grade_letter(avg)
+    grade_counts[letter] += 1
+
+for grade, count in grade_counts.items():
+    bar = "█" * (count * 5)
+    print(f"   {grade}: {bar} ({count})")
+
+print("=" * 50)
+```
