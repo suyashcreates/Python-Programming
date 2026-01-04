@@ -1,0 +1,50 @@
+
+```python
+# LISTS - Mutable
+fruits = ["apple", "banana", "cherry"]
+mixed = [1, "hello", 3.14, True, None]
+
+# List Indexing & Slicing
+print(fruits[0])      # apple
+print(fruits[-1])     # cherry
+print(fruits[0:2])    # ['apple', 'banana']
+
+# List Methods
+fruits.append("orange")        # Add at end
+fruits.insert(1, "mango")      # Insert at index
+fruits.remove("banana")        # Remove by value
+popped = fruits.pop()          # Remove & return last
+popped_idx = fruits.pop(0)     # Remove & return at index
+fruits.reverse()               # Reverse in place
+fruits.sort()                  # Sort in place
+fruits.clear()                 # Remove all items
+print(len(fruits))             # Length
+
+# List Operations
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+combined = list1 + list2       # Concatenate
+repeated = list1 * 2           # [1, 2, 3, 1, 2, 3]
+print(2 in list1)              # True (membership)
+
+# TUPLES - Immutable
+coordinates = (10, 20)
+colors = ("red", "green", "blue")
+
+# Tuple Operations
+print(colors[0])           # red
+print(colors.index("green"))  # 1
+print(colors.count("red"))    # 1
+print(len(colors))            # 3
+repeated = colors * 2         # Repeat
+print("red" in colors)        # True
+
+# Tuple Unpacking
+x, y = coordinates
+print(f"x={x}, y={y}")
+
+# Nested Structures
+matrix = [[1, 2], [3, 4], [5, 6]]
+print(matrix[0][1])  # 2
+```
+
