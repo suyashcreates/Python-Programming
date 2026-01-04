@@ -1,0 +1,59 @@
+
+```python
+# PROBLEM 1: Find second largest number in a list
+# Solution:
+numbers = [10, 5, 8, 20, 15, 3]
+sorted_nums = sorted(set(numbers), reverse=True)
+second_largest = sorted_nums[1]
+print(f"Second largest: {second_largest}")
+
+# PROBLEM 2: Remove duplicates from a list
+# Solution:
+original = [1, 2, 2, 3, 4, 4, 5, 1]
+unique = list(set(original))
+print(f"Unique elements: {unique}")
+
+# Alternative (maintaining order):
+unique_ordered = []
+for item in original:
+    if item not in unique_ordered:
+        unique_ordered.append(item)
+print(f"Unique (ordered): {unique_ordered}")
+
+# PROBLEM 3: Merge and sort two lists
+# Solution:
+list1 = [3, 1, 4]
+list2 = [2, 5, 6]
+merged = sorted(list1 + list2)
+print(f"Merged & sorted: {merged}")
+
+# PROBLEM 4: Count occurrences of each element
+# Solution:
+items = ["apple", "banana", "apple", "cherry", "banana", "apple"]
+for item in set(items):
+    print(f"{item}: {items.count(item)}")
+
+# PROBLEM 5: Swap first and last elements
+# Solution:
+lst = [1, 2, 3, 4, 5]
+lst[0], lst[-1] = lst[-1], lst[0]
+print(f"Swapped: {lst}")
+
+# PROBLEM 6: Find common elements in two lists
+# Solution:
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+common = [x for x in list1 if x in list2]
+print(f"Common elements: {common}")
+
+# PROBLEM 7: Tuple to List and back
+# Solution:
+my_tuple = (1, 2, 3)
+my_list = list(my_tuple)
+my_list.append(4)
+new_tuple = tuple(my_list)
+print(f"New tuple: {new_tuple}")
+```
+
+
+---
