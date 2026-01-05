@@ -1,0 +1,82 @@
+
+```python
+"""
+PROJECT: Inventory Management System
+Description: Manage product inventory using dictionaries and sets
+"""
+
+print("=" * 60)
+print("           INVENTORY MANAGEMENT SYSTEM")
+print("=" * 60)
+
+# Inventory: {product_id: {name, category, price, quantity}}
+inventory = {
+    "P001": {"name": "Laptop", "category": "Electronics", "price": 999.99, "quantity": 15},
+    "P002": {"name": "Mouse", "category": "Electronics", "price": 29.99, "quantity": 50},
+    "P003": {"name": "Notebook", "category": "Stationery", "price": 4.99, "quantity": 200},
+    "P004": {"name": "Pen", "category": "Stationery", "price": 1.99, "quantity": 500},
+    "P005": {"name": "Headphones", "category": "Electronics", "price": 79.99, "quantity": 30},
+}
+
+# Categories tracking with sets
+categories = set()
+for product in inventory.values():
+    categories.add(product["category"])
+
+def display_inventory():
+    print("\n📦 CURRENT INVENTORY:")
+    print("-" * 60)
+    print(f"{'ID':<8} {'Name':<15} {'Category':<12} {'Price':>10} {'Qty':>6}")
+    print("-" * 60)
+    for pid, details in inventory.items():
+        print(f"{pid:<8} {details['name']:<15} {details['category']:<12} ${details['price']:>9.2f} {details['quantity']:>6}")
+    print("-" * 60)
+
+def get_low_stock(threshold=30):
+    low = {pid: p for pid, p in inventory.items() if p["quantity"] <= threshold}
+    return low
+
+def calculate_inventory_value():
+    total = sum(p["price"] * p["quantity"] for p in inventory.values())
+    return total
+
+def get_by_category(category):
+    return {pid: p for pid, p in inventory.items() if p["category"] == category}
+
+# Display all inventory
+display_inventory()
+
+# Statistics
+print("\n📊 INVENTORY STATISTICS:")
+print(f"   • Total Products: {len(inventory)}")
+print(f"   • Categories: {categories}")
+print(f"   • Total Inventory Value: ${calculate_inventory_value():,.2f}")
+
+# Category-wise breakdown
+print("\n📁 CATEGORY BREAKDOWN:")
+for cat in categories:
+    cat_items = get_by_category(cat)
+    cat_value = sum(p["price"] * p["quantity"] for p in cat_items.values())
+    print(f"   • {cat}: {len(cat_items)} items, Value: ${cat_value:,.2f}")
+
+# Low stock alert
+print("\n⚠️  LOW STOCK ALERT (≤30 units):")
+low_stock = get_low_stock()
+if low_stock:
+    for pid, product in low_stock.items():
+        print(f"   • {product['name']} ({pid}): Only {product['quantity']} left!")
+else:
+    print("   All items well stocked!")
+
+# Price analysis
+prices = [p["price"] for p in inventory.values()]
+print("\n💰 PRICE ANALYSIS:")
+print(f"   • Highest Price: ${max(prices):.2f}")
+print(f"   • Lowest Price: ${min(prices):.2f}")
+print(f"   • Average Price: ${sum(prices)/len(prices):.2f}")
+
+# Most expensive item
+expensive_id = max(inventory, key=lambda x: inventory[x]["price"])
+print(f"   • Most Expensive: {inventory[expensive_id]['name']} (${inventory[expensive_id]['price']})")
+
+print("=" * 60)
