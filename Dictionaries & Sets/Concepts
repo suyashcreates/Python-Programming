@@ -1,0 +1,52 @@
+### Topics Covered:
+```python
+# DICTIONARIES - Mutable, Key-Value Pairs
+student = {
+    "name": "John",
+    "age": 20,
+    "grades": [85, 90, 88]
+}
+
+# Accessing Values
+print(student["name"])         # John
+print(student.get("age"))      # 20
+print(student.get("email", "N/A"))  # N/A (default)
+
+# Dictionary Methods
+print(student.keys())          # dict_keys(['name', 'age', 'grades'])
+print(student.values())        # dict_values(['John', 20, [85, 90, 88]])
+print(student.items())         # Key-value pairs as tuples
+
+student.update({"email": "john@email.com"})  # Add/Update
+student["phone"] = "123-456"   # Add new key
+del student["phone"]           # Delete key
+popped = student.pop("email")  # Remove & return value
+student.clear()                # Remove all
+
+# Dictionary from Keys
+keys = ["a", "b", "c"]
+new_dict = dict.fromkeys(keys, 0)  # {'a': 0, 'b': 0, 'c': 0}
+
+# SETS - Unordered, Unique Values
+fruits = {"apple", "banana", "cherry"}
+empty_set = set()  # NOT {} which creates empty dict
+
+# Set Operations
+fruits.add("orange")          # Add element
+fruits.remove("banana")       # Remove (error if not exists)
+fruits.discard("mango")       # Remove (no error if not exists)
+print(len(fruits))            # Length
+print("apple" in fruits)      # Membership
+
+# Set Math Operations
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+print(set1.union(set2))        # {1, 2, 3, 4, 5, 6}
+print(set1.intersection(set2)) # {3, 4}
+print(set1.difference(set2))   # {1, 2}
+print(set1.symmetric_difference(set2))  # {1, 2, 5, 6}
+```
+
+
+---
