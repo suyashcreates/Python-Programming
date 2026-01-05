@@ -1,0 +1,62 @@
+```python
+# PROBLEM 1: Count character frequency in a string
+# Solution:
+text = "hello world"
+freq = {}
+for char in text:
+    if char != " ":
+        freq[char] = freq.get(char, 0) + 1
+print(f"Frequency: {freq}")
+
+# PROBLEM 2: Merge two dictionaries
+# Solution:
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+merged = {**dict1, **dict2}
+# OR: dict1.update(dict2)
+print(f"Merged: {merged}")
+
+# PROBLEM 3: Find the key with maximum value
+# Solution:
+scores = {"Alice": 85, "Bob": 92, "Charlie": 78}
+max_key = max(scores, key=scores.get)
+print(f"Highest scorer: {max_key} with {scores[max_key]}")
+
+# PROBLEM 4: Invert a dictionary (swap keys and values)
+# Solution:
+original = {"a": 1, "b": 2, "c": 3}
+inverted = {v: k for k, v in original.items()}
+print(f"Inverted: {inverted}")
+
+# PROBLEM 5: Remove duplicates using set
+# Solution:
+numbers = [1, 2, 2, 3, 4, 4, 5, 5, 5]
+unique = list(set(numbers))
+print(f"Unique: {unique}")
+
+# PROBLEM 6: Find common and unique elements in two lists
+# Solution:
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+set1, set2 = set(list1), set(list2)
+common = set1.intersection(set2)
+only_in_first = set1.difference(set2)
+only_in_second = set2.difference(set1)
+print(f"Common: {common}")
+print(f"Only in list1: {only_in_first}")
+print(f"Only in list2: {only_in_second}")
+
+# PROBLEM 7: Group words by their first letter
+# Solution:
+words = ["apple", "banana", "avocado", "cherry", "apricot", "blueberry"]
+grouped = {}
+for word in words:
+    first_letter = word[0]
+    if first_letter not in grouped:
+        grouped[first_letter] = []
+    grouped[first_letter].append(word)
+print(f"Grouped: {grouped}")
+```
+
+
+```
