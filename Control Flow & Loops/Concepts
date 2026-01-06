@@ -1,0 +1,65 @@
+
+
+### Topics Covered:
+```python
+# IF-ELIF-ELSE
+age = 20
+if age < 13:
+    print("Child")
+elif age < 20:
+    print("Teenager")
+else:
+    print("Adult")
+
+# NESTED IF
+score = 85
+if score >= 60:
+    if score >= 90:
+        print("A Grade")
+    elif score >= 80:
+        print("B Grade")
+    else:
+        print("C Grade")
+
+# WHILE LOOP
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+# FOR LOOP
+for i in range(5):          # 0 to 4
+    print(i)
+
+for i in range(2, 10, 2):   # 2, 4, 6, 8
+    print(i)
+
+for item in ["a", "b", "c"]:
+    print(item)
+
+# FOR-ELSE
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed!")  # Runs if loop completes without break
+
+# BREAK - Exit loop
+for i in range(10):
+    if i == 5:
+        break
+    print(i)  # Prints 0-4
+
+# CONTINUE - Skip iteration
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)  # Prints 0, 1, 3, 4
+
+# PASS - Placeholder
+for i in range(5):
+    pass  # Do nothing (for now)
+
+# PRINT with end
+for i in range(5):
+    print(i, end=" ")  # 0 1 2 3 4 (same line)
+```
