@@ -1,0 +1,86 @@
+
+```python
+# PROBLEM 1: FizzBuzz
+# Solution:
+for i in range(1, 31):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+# PROBLEM 2: Find prime numbers up to N
+# Solution:
+n = 50
+primes = []
+for num in range(2, n + 1):
+    is_prime = True
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        primes.append(num)
+print(f"Primes up to {n}: {primes}")
+
+# PROBLEM 3: Print multiplication table
+# Solution:
+num = 7
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
+# PROBLEM 4: Sum of digits
+# Solution:
+number = 12345
+total = 0
+while number > 0:
+    digit = number % 10
+    total += digit
+    number //= 10
+print(f"Sum of digits: {total}")
+
+# PROBLEM 5: Factorial using while loop
+# Solution:
+n = 5
+factorial = 1
+i = 1
+while i <= n:
+    factorial *= i
+    i += 1
+print(f"{n}! = {factorial}")
+
+# PROBLEM 6: Pattern printing
+# Solution:
+rows = 5
+# Right triangle
+for i in range(1, rows + 1):
+    print("*" * i)
+
+print()
+# Inverted triangle
+for i in range(rows, 0, -1):
+    print("*" * i)
+
+# PROBLEM 7: Find first occurrence of element
+# Solution:
+numbers = [4, 2, 7, 1, 9, 3, 7, 5]
+target = 7
+for i, num in enumerate(numbers):
+    if num == target:
+        print(f"Found {target} at index {i}")
+        break
+else:
+    print(f"{target} not found")
+
+# PROBLEM 8: Nested loop - Number pyramid
+# Solution:
+rows = 5
+for i in range(1, rows + 1):
+    print(" " * (rows - i), end="")
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+```
