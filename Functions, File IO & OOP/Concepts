@@ -1,0 +1,76 @@
+
+### Topics Covered:
+```python
+# FUNCTIONS
+def greet(name):
+    """Greet a person by name"""
+    return f"Hello, {name}!"
+
+# Default Arguments
+def greet_default(name="Stranger"):
+    return f"Hello, {name}!"
+
+# Multiple Returns
+def calculate(a, b):
+    return a + b, a - b, a * b, a / b
+
+add, sub, mul, div = calculate(10, 5)
+
+# RECURSION
+def factorial(n):
+    if n <= 1:  # Base case
+        return 1
+    return n * factorial(n - 1)  # Recursive case
+
+# FILE I/O
+# Reading
+with open("file.txt", "r") as f:
+    content = f.read()        # Read all
+    # OR
+    lines = f.readlines()     # List of lines
+    # OR
+    for line in f:
+        print(line.strip())
+
+# Writing
+with open("file.txt", "w") as f:
+    f.write("Hello World\n")
+
+# Appending
+with open("file.txt", "a") as f:
+    f.write("New line\n")
+
+# OOP BASICS
+class Student:
+    # Class attribute
+    school = "Python High"
+    
+    # Constructor
+    def __init__(self, name, age):
+        self.name = name      # Instance attribute
+        self.age = age
+    
+    # Instance method
+    def introduce(self):
+        return f"Hi, I'm {self.name}, {self.age} years old"
+    
+    # String representation
+    def __str__(self):
+        return f"Student({self.name}, {self.age})"
+    
+    def __repr__(self):
+        return f"Student('{self.name}', {self.age})"
+    
+    # Static method
+    @staticmethod
+    def school_motto():
+        return "Learn. Code. Create."
+
+# Creating objects
+s1 = Student("Alice", 20)
+print(s1.name)
+print(s1.introduce())
+print(s1)  # Calls __str__
+```
+
+
