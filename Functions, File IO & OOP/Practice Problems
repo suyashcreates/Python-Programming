@@ -1,0 +1,90 @@
+
+
+```python
+# PROBLEM 1: Function to check prime number
+# Solution:
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(17))  # True
+print(is_prime(15))  # False
+
+# PROBLEM 2: Recursive Fibonacci
+# Solution:
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Print first 10 fibonacci numbers
+for i in range(10):
+    print(fibonacci(i), end=" ")
+
+# PROBLEM 3: Count words in a file
+# Solution:
+def count_words(filename):
+    try:
+        with open(filename, "r") as f:
+            content = f.read()
+            words = content.split()
+            return len(words)
+    except FileNotFoundError:
+        return "File not found"
+
+# PROBLEM 4: Write and read to-do list
+# Solution:
+def add_todo(task, filename="todos.txt"):
+    with open(filename, "a") as f:
+        f.write(task + "\n")
+
+def get_todos(filename="todos.txt"):
+    try:
+        with open(filename, "r") as f:
+            return f.readlines()
+    except FileNotFoundError:
+        return []
+
+# PROBLEM 5: Create a Bank Account class
+# Solution:
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+        self.transactions = []
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            self.transactions.append(f"Deposit: +${amount}")
+            return True
+        return False
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            self.transactions.append(f"Withdraw: -${amount}")
+            return True
+        return False
+    
+    def get_balance(self):
+        return f"${self.balance:.2f}"
+    
+    def __str__(self):
+        return f"Account({self.owner}): {self.get_balance()}"
+
+# PROBLEM 6: Recursive sum of list
+# Solution:
+def recursive_sum(lst):
+    if not lst:
+        return 0
+    return lst[0] + recursive_sum(lst[1:])
+
+print(recursive_sum([1, 2, 3, 4, 5]))  # 15
+```
