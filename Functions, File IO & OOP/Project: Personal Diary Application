@@ -1,0 +1,183 @@
+
+```python
+"""
+PROJECT: Personal Diary Application
+Description: A diary app using functions, file I/O, and OOP
+"""
+
+import os
+from datetime import datetime
+
+class DiaryEntry:
+    """Class to represent a diary entry"""
+    
+    def __init__(self, title, content, mood="neutral"):
+        self.title = title
+        self.content = content
+        self.mood = mood
+        self.timestamp = datetime.now()
+    
+    def __str__(self):
+        return f"""
+{'='*50}
+📅 {self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}
+📌 Title: {self.title}
+😊 Mood: {self.mood}
+{'='*50}
+{self.content}
+{'='*50}
+"""
+    
+    def to_file_format(self):
+        return f"{self.timestamp}|{self.title}|{self.mood}|{self.content}\n"
+    
+    @staticmethod
+    def from_file_format(line):
+        parts = line.strip().split("|")
+        if len(parts) == 4:
+            entry = DiaryEntry(parts[1], parts[3], parts[2])
+            entry.timestamp = datetime.fromisoformat(parts[0])
+            return entry
+        return None
+
+
+class Diary:
+    """Class to manage diary operations"""
+    
+    def __init__(self, filename="diary.txt"):
+        self.filename = filename
+        self.entries = []
+        self.load_entries()
+    
+    def load_entries(self):
+        """Load entries from file"""
+        if os.path.exists(self.filename):
+            with open(self.filename, "r") as f:
+                for line in f:
+                    entry = DiaryEntry.from_file_format(line)
+                    if entry:
+                        self.entries.append(entry)
+    
+    def save_entry(self, entry):
+        """Save a single entry to file"""
+        with open(self.filename, "a") as f:
+            f.write(entry.to_file_format())
+    
+    def add_entry(self, title, content, mood):
+        """Add a new diary entry"""
+        entry = DiaryEntry(title, content, mood)
+        self.entries.append(entry)
+        self.save_entry(entry)
+        return entry
+    
+    def view_all_entries(self):
+        """View all diary entries"""
+        if not self.entries:
+            print("\n📭 No entries yet. Start writing!")
+            return
+        
+        print(f"\n📖 Total Entries: {len(self.entries)}")
+        for i, entry in enumerate(self.entries, 1):
+            print(f"\n--- Entry #{i} ---")
+            print(entry)
+    
+    def search_entries(self, keyword):
+        """Search entries by keyword"""
+        found = []
+        for entry in self.entries:
+            if keyword.lower() in entry.title.lower() or \
+               keyword.lower() in entry.content.lower():
+                found.append(entry)
+        return found
+    
+    def get_stats(self):
+        """Get diary statistics"""
+        if not self.entries:
+            return "No entries yet!"
+        
+        mood_count = {}
+        for entry in self.entries:
+            mood_count[entry.mood] = mood_count.get(entry.mood, 0) + 1
+        
+        total_words = sum(len(e.content.split()) for e in self.entries)
+        
+        return f"""
+📊 DIARY STATISTICS
+{'='*40}
+• Total Entries: {len(self.entries)}
+• Total Words Written: {total_words}
+• Average Words/Entry: {total_words // len(self.entries)}
+• First Entry: {self.entries[0].timestamp.strftime('%Y-%m-%d')}
+• Latest Entry: {self.entries[-1].timestamp.strftime('%Y-%m-%d')}
+• Mood Distribution: {mood_count}
+{'='*40}
+"""
+
+
+def main():
+    """Main function to run the diary app"""
+    diary = Diary()
+    
+    print("=" * 50)
+    print("       📔 PERSONAL DIARY APPLICATION 📔")
+    print("=" * 50)
+    
+    while True:
+        print("\n📋 MENU:")
+        print("1. Write New Entry")
+        print("2. View All Entries")
+        print("3. Search Entries")
+        print("4. View Statistics")
+        print("5. Exit")
+        
+        choice = input("\nEnter choice (1-5): ")
+        
+        if choice == "1":
+            print("\n✏️  NEW ENTRY")
+            title = input("Title: ")
+            print("Content (press Enter twice to finish):")
+            lines = []
+            while True:
+                line = input()
+                if line == "":
+                    break
+                lines.append(line)
+            content = "\n".join(lines)
+            
+            moods = ["happy", "sad", "neutral", "excited", "tired"]
+            print(f"Mood options: {moods}")
+            mood = input("How are you feeling? ")
+            
+            entry = diary.add_entry(title, content, mood)
+            print("\n✅ Entry saved successfully!")
+            print(entry)
+        
+        elif choice == "2":
+            diary.view_all_entries()
+        
+        elif choice == "3":
+            keyword = input("\n🔍 Enter search keyword: ")
+            results = diary.search_entries(keyword)
+            if results:
+                print(f"\nFound {len(results)} entries:")
+                for entry in results:
+                    print(entry)
+            else:
+                print("No entries found with that keyword.")
+        
+        elif choice == "4":
+            print(diary.get_stats())
+        
+        elif choice == "5":
+            print("\n👋 Goodbye! Keep writing!")
+            break
+        
+        else:
+            print("⚠️  Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+---
