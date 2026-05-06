@@ -1,0 +1,480 @@
+(base) C:\Users\ASUS>dl_env:
+'dl_env:' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\ASUS>conda create -n dl_env python=3.10
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.7.4
+  latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=26.3.2
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\ASUS\anaconda3\envs\dl_env
+
+  added / updated specs:
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bzip2-1.0.8                |       h2bbff1b_6          90 KB
+    ca-certificates-2026.3.19  |       haa95532_0         126 KB
+    libexpat-2.8.0             |       hd7fb8db_0         122 KB
+    libffi-3.4.8               |       h2b21627_2         118 KB
+    libzlib-1.3.1              |       h1c6eee0_1          62 KB
+    openssl-3.5.6              |       hbb43b14_0         8.9 MB
+    packaging-26.0             |  py310haa95532_0         166 KB
+    pip-26.0.1                 |     pyhc872135_1         1.1 MB
+    python-3.10.20             |       h1044e36_0        15.5 MB
+    setuptools-82.0.1          |  py310haa95532_0         1.2 MB
+    tk-8.6.15                  |       hf199647_0         3.5 MB
+    tzdata-2026a               |       he532380_0         117 KB
+    wheel-0.46.3               |  py310haa95532_0          78 KB
+    xz-5.8.2                   |       h53af0af_0         265 KB
+    zlib-1.3.1                 |       h1c6eee0_1         104 KB
+    ------------------------------------------------------------
+                                           Total:        31.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              pkgs/main/win-64::bzip2-1.0.8-h2bbff1b_6
+  ca-certificates    pkgs/main/win-64::ca-certificates-2026.3.19-haa95532_0
+  libexpat           pkgs/main/win-64::libexpat-2.8.0-hd7fb8db_0
+  libffi             pkgs/main/win-64::libffi-3.4.8-h2b21627_2
+  libzlib            pkgs/main/win-64::libzlib-1.3.1-h1c6eee0_1
+  openssl            pkgs/main/win-64::openssl-3.5.6-hbb43b14_0
+  packaging          pkgs/main/win-64::packaging-26.0-py310haa95532_0
+  pip                pkgs/main/noarch::pip-26.0.1-pyhc872135_1
+  python             pkgs/main/win-64::python-3.10.20-h1044e36_0
+  setuptools         pkgs/main/win-64::setuptools-82.0.1-py310haa95532_0
+  sqlite             pkgs/main/win-64::sqlite-3.51.2-hee5a0db_0
+  tk                 pkgs/main/win-64::tk-8.6.15-hf199647_0
+  tzdata             pkgs/main/noarch::tzdata-2026a-he532380_0
+  ucrt               pkgs/main/win-64::ucrt-10.0.22621.0-haa95532_0
+  vc                 pkgs/main/win-64::vc-14.3-h2df5915_10
+  vc14_runtime       pkgs/main/win-64::vc14_runtime-14.44.35208-h4927774_10
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.44.35208-ha6b5a95_10
+  wheel              pkgs/main/win-64::wheel-0.46.3-py310haa95532_0
+  xz                 pkgs/main/win-64::xz-5.8.2-h53af0af_0
+  zlib               pkgs/main/win-64::zlib-1.3.1-h1c6eee0_1
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate dl_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+(base) C:\Users\ASUS>conda activate dl_env
+
+(dl_env) C:\Users\ASUS>$ conda activate dl_env
+'$' is not recognized as an internal or external command,
+operable program or batch file.
+
+(dl_env) C:\Users\ASUS>conda install numpy pandas scikit-learn
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.7.4
+  latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=26.3.2
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\ASUS\anaconda3\envs\dl_env
+
+  added / updated specs:
+    - numpy
+    - pandas
+    - scikit-learn
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bottleneck-1.4.2           |  py310h540bb41_1         121 KB
+    intel-openmp-2025.0.0      |    haa95532_1164         2.1 MB
+    joblib-1.5.3               |  py310haa95532_0         408 KB
+    libhwloc-2.12.1            |default_hfa10c62_1000         2.3 MB
+    libiconv-1.18              |       hc89ec93_0         687 KB
+    libxml2-2.13.9             |       h6201b9f_0         1.5 MB
+    mkl-2025.0.0               |     h5da7b33_930       104.7 MB
+    mkl-service-2.5.2          |  py310h0b37514_0          72 KB
+    mkl_fft-2.2.0              |  py310h18b77b3_0         153 KB
+    mkl_random-1.3.0           |  py310ha5e6156_0         245 KB
+    numexpr-2.14.1             |  py310h5dbb76a_1         182 KB
+    numpy-2.2.5                |  py310h8bbff67_3          10 KB
+    numpy-base-2.2.5           |  py310h89dd80d_3         9.3 MB
+    pandas-2.3.3               |  py310h42c1672_1        11.0 MB
+    python-dateutil-2.9.0post0 |  py310haa95532_2         281 KB
+    python-tzdata-2025.3       |     pyhd3eb1b0_0         139 KB
+    pytz-2026.1.post1          |  py310haa95532_0         214 KB
+    scikit-learn-1.7.2         |  py310h7f7e138_1         7.4 MB
+    scipy-1.15.3               |  py310h5a16d48_2        26.2 MB
+    six-1.17.0                 |  py310haa95532_0          32 KB
+    tbb-2022.3.0               |       h90c84d6_0         162 KB
+    tbb-devel-2022.3.0         |       h90c84d6_0         1.1 MB
+    threadpoolctl-3.5.0        |  py310h4442805_1          42 KB
+    vc-14.42                   |       haa95532_5          11 KB
+    ------------------------------------------------------------
+                                           Total:       168.2 MB
+
+The following NEW packages will be INSTALLED:
+
+  blas               pkgs/main/win-64::blas-1.0-mkl
+  bottleneck         pkgs/main/win-64::bottleneck-1.4.2-py310h540bb41_1
+  intel-openmp       pkgs/main/win-64::intel-openmp-2025.0.0-haa95532_1164
+  joblib             pkgs/main/win-64::joblib-1.5.3-py310haa95532_0
+  libhwloc           pkgs/main/win-64::libhwloc-2.12.1-default_hfa10c62_1000
+  libiconv           pkgs/main/win-64::libiconv-1.18-hc89ec93_0
+  libxml2            pkgs/main/win-64::libxml2-2.13.9-h6201b9f_0
+  mkl                pkgs/main/win-64::mkl-2025.0.0-h5da7b33_930
+  mkl-service        pkgs/main/win-64::mkl-service-2.5.2-py310h0b37514_0
+  mkl_fft            pkgs/main/win-64::mkl_fft-2.2.0-py310h18b77b3_0
+  mkl_random         pkgs/main/win-64::mkl_random-1.3.0-py310ha5e6156_0
+  numexpr            pkgs/main/win-64::numexpr-2.14.1-py310h5dbb76a_1
+  numpy              pkgs/main/win-64::numpy-2.2.5-py310h8bbff67_3
+  numpy-base         pkgs/main/win-64::numpy-base-2.2.5-py310h89dd80d_3
+  pandas             pkgs/main/win-64::pandas-2.3.3-py310h42c1672_1
+  python-dateutil    pkgs/main/win-64::python-dateutil-2.9.0post0-py310haa95532_2
+  python-tzdata      pkgs/main/noarch::python-tzdata-2025.3-pyhd3eb1b0_0
+  pytz               pkgs/main/win-64::pytz-2026.1.post1-py310haa95532_0
+  scikit-learn       pkgs/main/win-64::scikit-learn-1.7.2-py310h7f7e138_1
+  scipy              pkgs/main/win-64::scipy-1.15.3-py310h5a16d48_2
+  six                pkgs/main/win-64::six-1.17.0-py310haa95532_0
+  tbb                pkgs/main/win-64::tbb-2022.3.0-h90c84d6_0
+  tbb-devel          pkgs/main/win-64::tbb-devel-2022.3.0-h90c84d6_0
+  threadpoolctl      pkgs/main/win-64::threadpoolctl-3.5.0-py310h4442805_1
+
+The following packages will be UPDATED:
+
+  vc                                       14.3-h2df5915_10 --> 14.42-haa95532_5
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(dl_env) C:\Users\ASUS>pip install tensorflow
+Collecting tensorflow
+  Downloading tensorflow-2.21.0-cp310-cp310-win_amd64.whl.metadata (4.5 kB)
+Collecting absl-py>=1.0.0 (from tensorflow)
+  Downloading absl_py-2.4.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow)
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=25.9.23 (from tensorflow)
+  Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow)
+  Downloading gast-0.7.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting google_pasta>=0.1.1 (from tensorflow)
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow)
+  Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl.metadata (5.3 kB)
+Collecting opt_einsum>=2.3.2 (from tensorflow)
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: packaging in .\anaconda3\envs\dl_env\lib\site-packages (from tensorflow) (26.0)
+Collecting protobuf<8.0.0,>=6.31.1 (from tensorflow)
+  Downloading protobuf-7.34.1-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting requests<3,>=2.21.0 (from tensorflow)
+  Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: setuptools in .\anaconda3\envs\dl_env\lib\site-packages (from tensorflow) (82.0.1)
+Requirement already satisfied: six>=1.12.0 in .\anaconda3\envs\dl_env\lib\site-packages (from tensorflow) (1.17.0)
+Collecting termcolor>=1.1.0 (from tensorflow)
+  Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting typing_extensions>=3.6.6 (from tensorflow)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting wrapt>=1.11.0 (from tensorflow)
+  Downloading wrapt-2.1.2-cp310-cp310-win_amd64.whl.metadata (7.6 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow)
+  Downloading grpcio-1.80.0-cp310-cp310-win_amd64.whl.metadata (3.9 kB)
+Collecting keras>=3.12.0 (from tensorflow)
+  Downloading keras-3.12.1-py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: numpy>=1.26.0 in .\anaconda3\envs\dl_env\lib\site-packages (from tensorflow) (2.2.5)
+Collecting h5py<3.15.0,>=3.11.0 (from tensorflow)
+  Downloading h5py-3.14.0-cp310-cp310-win_amd64.whl.metadata (2.7 kB)
+Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow)
+  Downloading ml_dtypes-0.5.4-cp310-cp310-win_amd64.whl.metadata (9.2 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow)
+  Downloading charset_normalizer-3.4.7-cp310-cp310-win_amd64.whl.metadata (41 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.21.0->tensorflow)
+  Downloading idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+Collecting urllib3<3,>=1.26 (from requests<3,>=2.21.0->tensorflow)
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests<3,>=2.21.0->tensorflow)
+  Downloading certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in .\anaconda3\envs\dl_env\lib\site-packages (from astunparse>=1.6.0->tensorflow) (0.46.3)
+Collecting rich (from keras>=3.12.0->tensorflow)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.12.0->tensorflow)
+  Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.12.0->tensorflow)
+  Downloading optree-0.19.0-cp310-cp310-win_amd64.whl.metadata (35 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.12.0->tensorflow)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->keras>=3.12.0->tensorflow)
+  Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.12.0->tensorflow)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading tensorflow-2.21.0-cp310-cp310-win_amd64.whl (350.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 350.6/350.6 MB 6.4 MB/s  0:00:54
+Downloading grpcio-1.80.0-cp310-cp310-win_amd64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 6.6 MB/s  0:00:00
+Downloading h5py-3.14.0-cp310-cp310-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 6.9 MB/s  0:00:00
+Downloading ml_dtypes-0.5.4-cp310-cp310-win_amd64.whl (210 kB)
+Downloading protobuf-7.34.1-cp310-abi3-win_amd64.whl (437 kB)
+Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp310-cp310-win_amd64.whl (159 kB)
+Downloading idna-3.13-py3-none-any.whl (68 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading absl_py-2.4.0-py3-none-any.whl (135 kB)
+Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Downloading certifi-2026.4.22-py3-none-any.whl (135 kB)
+Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Downloading gast-0.7.0-py3-none-any.whl (22 kB)
+Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Downloading keras-3.12.1-py3-none-any.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 7.1 MB/s  0:00:00
+Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl (26.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.4/26.4 MB 6.5 MB/s  0:00:04
+Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Downloading wrapt-2.1.2-cp310-cp310-win_amd64.whl (60 kB)
+Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+Downloading optree-0.19.0-cp310-cp310-win_amd64.whl (321 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 5.6 MB/s  0:00:00
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: namex, libclang, flatbuffers, wrapt, urllib3, typing_extensions, termcolor, pygments, protobuf, opt_einsum, ml_dtypes, mdurl, idna, h5py, google_pasta, gast, charset_normalizer, certifi, absl-py, requests, optree, markdown-it-py, grpcio, astunparse, rich, keras, tensorflow
+Successfully installed absl-py-2.4.0 astunparse-1.6.3 certifi-2026.4.22 charset_normalizer-3.4.7 flatbuffers-25.12.19 gast-0.7.0 google_pasta-0.2.0 grpcio-1.80.0 h5py-3.14.0 idna-3.13 keras-3.12.1 libclang-18.1.1 markdown-it-py-4.0.0 mdurl-0.1.2 ml_dtypes-0.5.4 namex-0.1.0 opt_einsum-3.4.0 optree-0.19.0 protobuf-7.34.1 pygments-2.20.0 requests-2.33.1 rich-15.0.0 tensorflow-2.21.0 termcolor-3.3.0 typing_extensions-4.15.0 urllib3-2.6.3 wrapt-2.1.2
+
+(dl_env) C:\Users\ASUS>conda install ipykernel
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.7.4
+  latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=26.3.2
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\ASUS\anaconda3\envs\dl_env
+
+  added / updated specs:
+    - ipykernel
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    asttokens-3.0.1            |  py310haa95532_0          60 KB
+    colorama-0.4.6             |  py310haa95532_0          32 KB
+    comm-0.2.3                 |  py310haa95532_0          15 KB
+    debugpy-1.8.16             |  py310h885b0b7_1         3.0 MB
+    decorator-5.2.1            |  py310haa95532_0          38 KB
+    exceptiongroup-1.3.0       |  py310haa95532_0          41 KB
+    executing-2.2.1            |  py310haa95532_0         332 KB
+    ipykernel-7.2.0            |  py310h4442805_0         207 KB
+    ipython-8.30.0             |  py310haa95532_0         1.2 MB
+    jedi-0.19.2                |  py310haa95532_0         1.1 MB
+    jupyter_client-8.8.0       |  py310haa95532_0         210 KB
+    jupyter_core-5.9.1         |  py310haa95532_0         105 KB
+    libsodium-1.0.21           |       h19b670b_0         594 KB
+    matplotlib-inline-0.2.1    |  py310haa95532_0          17 KB
+    nest-asyncio-1.6.0         |  py310haa95532_0          15 KB
+    parso-0.8.5                |  py310haa95532_0         186 KB
+    platformdirs-4.9.4         |  py310haa95532_0          47 KB
+    prompt-toolkit-3.0.52      |  py310haa95532_1         566 KB
+    prompt_toolkit-3.0.52      |       hd3eb1b0_1           5 KB
+    psutil-7.0.0               |  py310h02ab6af_1         443 KB
+    pure_eval-0.2.3            |  py310haa95532_0          29 KB
+    pygments-2.20.0            |  py310haa95532_0         4.5 MB
+    pywin32-311                |  py310h885b0b7_0        11.2 MB
+    pyzmq-27.1.0               |  py310h7149c55_1         320 KB
+    stack_data-0.6.3           |  py310haa95532_0          55 KB
+    tornado-6.5.5              |  py310h1c6eee0_0         659 KB
+    traitlets-5.14.3           |  py310haa95532_0         182 KB
+    typing-extensions-4.15.0   |  py310haa95532_0          12 KB
+    typing_extensions-4.15.0   |  py310haa95532_0          79 KB
+    wcwidth-0.2.14             |  py310haa95532_0          63 KB
+    zeromq-4.3.5               |       h6a984cb_2         4.0 MB
+    ------------------------------------------------------------
+                                           Total:        29.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  asttokens          pkgs/main/win-64::asttokens-3.0.1-py310haa95532_0
+  colorama           pkgs/main/win-64::colorama-0.4.6-py310haa95532_0
+  comm               pkgs/main/win-64::comm-0.2.3-py310haa95532_0
+  debugpy            pkgs/main/win-64::debugpy-1.8.16-py310h885b0b7_1
+  decorator          pkgs/main/win-64::decorator-5.2.1-py310haa95532_0
+  exceptiongroup     pkgs/main/win-64::exceptiongroup-1.3.0-py310haa95532_0
+  executing          pkgs/main/win-64::executing-2.2.1-py310haa95532_0
+  ipykernel          pkgs/main/win-64::ipykernel-7.2.0-py310h4442805_0
+  ipython            pkgs/main/win-64::ipython-8.30.0-py310haa95532_0
+  jedi               pkgs/main/win-64::jedi-0.19.2-py310haa95532_0
+  jupyter_client     pkgs/main/win-64::jupyter_client-8.8.0-py310haa95532_0
+  jupyter_core       pkgs/main/win-64::jupyter_core-5.9.1-py310haa95532_0
+  libsodium          pkgs/main/win-64::libsodium-1.0.21-h19b670b_0
+  matplotlib-inline  pkgs/main/win-64::matplotlib-inline-0.2.1-py310haa95532_0
+  nest-asyncio       pkgs/main/win-64::nest-asyncio-1.6.0-py310haa95532_0
+  parso              pkgs/main/win-64::parso-0.8.5-py310haa95532_0
+  platformdirs       pkgs/main/win-64::platformdirs-4.9.4-py310haa95532_0
+  prompt-toolkit     pkgs/main/win-64::prompt-toolkit-3.0.52-py310haa95532_1
+  prompt_toolkit     pkgs/main/noarch::prompt_toolkit-3.0.52-hd3eb1b0_1
+  psutil             pkgs/main/win-64::psutil-7.0.0-py310h02ab6af_1
+  pure_eval          pkgs/main/win-64::pure_eval-0.2.3-py310haa95532_0
+  pygments           pkgs/main/win-64::pygments-2.20.0-py310haa95532_0
+  pywin32            pkgs/main/win-64::pywin32-311-py310h885b0b7_0
+  pyzmq              pkgs/main/win-64::pyzmq-27.1.0-py310h7149c55_1
+  stack_data         pkgs/main/win-64::stack_data-0.6.3-py310haa95532_0
+  tornado            pkgs/main/win-64::tornado-6.5.5-py310h1c6eee0_0
+  traitlets          pkgs/main/win-64::traitlets-5.14.3-py310haa95532_0
+  typing-extensions  pkgs/main/win-64::typing-extensions-4.15.0-py310haa95532_0
+  typing_extensions  pkgs/main/win-64::typing_extensions-4.15.0-py310haa95532_0
+  wcwidth            pkgs/main/win-64::wcwidth-0.2.14-py310haa95532_0
+  zeromq             pkgs/main/win-64::zeromq-4.3.5-h6a984cb_2
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(dl_env) C:\Users\ASUS>python -m ipykernel install --user --name dl_env --display-name "Python (DL Practical)"
+Installed kernelspec dl_env in C:\Users\ASUS\AppData\Roaming\jupyter\kernels\dl_env
+
+(dl_env) C:\Users\ASUS>jupyter notebook
+[I 2026-05-05 21:03:43.759 ServerApp] Extension package jupyter_lsp took 0.1216s to import
+[I 2026-05-05 21:03:44.448 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-05-05 21:03:44.456 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-05-05 21:03:44.459 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-05-05 21:03:44.466 ServerApp] notebook | extension was successfully linked.
+[I 2026-05-05 21:03:45.840 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-05-05 21:03:45.910 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-05-05 21:03:45.912 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-05-05 21:03:45.913 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-05-05 21:03:45.919 LabApp] JupyterLab extension loaded from C:\Users\ASUS\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\jupyterlab
+[I 2026-05-05 21:03:45.919 LabApp] JupyterLab application directory is C:\Users\ASUS\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\lab
+[I 2026-05-05 21:03:45.920 LabApp] Extension Manager is 'pypi'.
+[I 2026-05-05 21:03:46.040 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-05-05 21:03:46.052 ServerApp] notebook | extension was successfully loaded.
+[I 2026-05-05 21:03:46.052 ServerApp] The port 8888 is already in use, trying another port.
+[I 2026-05-05 21:03:46.052 ServerApp] Serving notebooks from local directory: C:\Users\ASUS
+[I 2026-05-05 21:03:46.052 ServerApp] Jupyter Server 2.15.0 is running at:
+[I 2026-05-05 21:03:46.052 ServerApp] http://localhost:8889/tree?token=afccc7532126f4a1b23ed3e6e30e853cb71f69a18f4e62ec
+[I 2026-05-05 21:03:46.052 ServerApp]     http://127.0.0.1:8889/tree?token=afccc7532126f4a1b23ed3e6e30e853cb71f69a18f4e62ec
+[I 2026-05-05 21:03:46.052 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-05-05 21:03:46.152 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///C:/Users/ASUS/AppData/Roaming/jupyter/runtime/jpserver-22460-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8889/tree?token=afccc7532126f4a1b23ed3e6e30e853cb71f69a18f4e62ec
+        http://127.0.0.1:8889/tree?token=afccc7532126f4a1b23ed3e6e30e853cb71f69a18f4e62ec
+[I 2026-05-05 21:03:46.224 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2026-05-05 21:04:00.536 ServerApp] Notebook P1 (1).ipynb is not trusted
+[W 2026-05-05 21:04:01.273 ServerApp] Notebook P1 (1).ipynb is not trusted
+[I 2026-05-05 21:04:01.668 ServerApp] Kernel started: 4ce1eda3-3e7f-433b-a918-2d8aaf80ea72
+[I 2026-05-05 21:04:02.938 ServerApp] Connecting to kernel 4ce1eda3-3e7f-433b-a918-2d8aaf80ea72.
+[I 2026-05-05 21:04:02.952 ServerApp] Connecting to kernel 4ce1eda3-3e7f-433b-a918-2d8aaf80ea72.
+[I 2026-05-05 21:04:02.968 ServerApp] Connecting to kernel 4ce1eda3-3e7f-433b-a918-2d8aaf80ea72.
+[W 2026-05-05 21:04:03.006 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x00000226D1135C90>
+[W 2026-05-05 21:04:03.019 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x00000226D1189420>
+[I 2026-05-05 21:04:08.120 ServerApp] Kernel started: 7116fc04-3a74-48d4-a175-5dce76727627
+[I 2026-05-05 21:04:08.120 ServerApp] Kernel shutdown: 4ce1eda3-3e7f-433b-a918-2d8aaf80ea72
+[I 2026-05-05 21:04:08.930 ServerApp] Connecting to kernel 7116fc04-3a74-48d4-a175-5dce76727627.
+[I 2026-05-05 21:04:08.944 ServerApp] Connecting to kernel 7116fc04-3a74-48d4-a175-5dce76727627.
+[I 2026-05-05 21:04:09.225 ServerApp] Connecting to kernel 7116fc04-3a74-48d4-a175-5dce76727627.
+2026-05-05 21:04:33.815502: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-05 21:04:37.543791: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[I 2026-05-05 21:06:02.235 ServerApp] Saving file at /P1 (1).ipynb
+[I 2026-05-05 21:11:19.714 ServerApp] Uploading file to /P3_corrected.ipynb
+[I 2026-05-05 21:11:19.714 ServerApp] Uploading file to /P1_corrected.ipynb
+[I 2026-05-05 21:11:19.723 ServerApp] Uploading file to /P2_corrected.ipynb
+[W 2026-05-05 21:11:22.981 ServerApp] Notebook P1_corrected.ipynb is not trusted
+[I 2026-05-05 21:11:23.496 ServerApp] Connecting to kernel 7116fc04-3a74-48d4-a175-5dce76727627.
+[W 2026-05-05 21:11:23.614 ServerApp] Notebook P1_corrected.ipynb is not trusted
+[I 2026-05-05 21:11:24.088 ServerApp] Kernel started: 0c31ff47-2be6-47a3-a807-cda5854a0fd9
+[I 2026-05-05 21:11:25.218 ServerApp] Connecting to kernel 0c31ff47-2be6-47a3-a807-cda5854a0fd9.
+[I 2026-05-05 21:11:25.227 ServerApp] Connecting to kernel 0c31ff47-2be6-47a3-a807-cda5854a0fd9.
+[I 2026-05-05 21:11:25.240 ServerApp] Connecting to kernel 0c31ff47-2be6-47a3-a807-cda5854a0fd9.
+[I 2026-05-05 21:11:31.220 ServerApp] Connecting to kernel 0c31ff47-2be6-47a3-a807-cda5854a0fd9.
+2026-05-05 21:11:32.329021: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-05 21:11:33.220517: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-05 21:11:36.031714: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[W 2026-05-05 21:11:58.439 ServerApp] Notebook P2_corrected.ipynb is not trusted
+[I 2026-05-05 21:11:58.913 ServerApp] Connecting to kernel 7116fc04-3a74-48d4-a175-5dce76727627.
+[I 2026-05-05 21:11:58.940 ServerApp] Connecting to kernel 0c31ff47-2be6-47a3-a807-cda5854a0fd9.
+[W 2026-05-05 21:11:59.040 ServerApp] Notebook P2_corrected.ipynb is not trusted
+[I 2026-05-05 21:11:59.495 ServerApp] Kernel started: eda7a361-7247-4422-b962-d7c745e3772a
+[I 2026-05-05 21:12:00.515 ServerApp] Connecting to kernel eda7a361-7247-4422-b962-d7c745e3772a.
+2026-05-05 21:12:07.478593: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-05 21:12:08.317882: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-05 21:12:19.061362: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
